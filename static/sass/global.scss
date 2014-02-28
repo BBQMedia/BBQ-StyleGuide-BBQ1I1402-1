@@ -1,0 +1,31 @@
+@import "_variables";
+
+body {
+    font-size: 62.5%;
+}
+
+header{
+    padding: $outerSpacing;
+    .logo { float: left; }
+    nav{
+        li{
+            margin-left: 10px
+        }
+    }
+}
+
+section {
+    font-size: 1em;
+    margin: $outerSpacing;
+    padding: 2em;
+    border-bottom: 1px dotted #000;
+    h1 { font-size: 2em;}
+    p { font-size: 1.2em }
+    section{
+        border-bottom: 0;
+    }
+}
+
+footer {
+    padding: $outerSpacing;
+}
