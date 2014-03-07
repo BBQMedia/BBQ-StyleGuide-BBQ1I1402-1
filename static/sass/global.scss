@@ -1,31 +1,92 @@
-@import "_variables";
+@import url(http://fonts.googleapis.com/css?family=Quicksand:300,400,700);
+
+html { height: 100%; }
 
 body {
+    height: 100%;
     font-size: 62.5%;
+    font-family: 'Quicksand', 'helvetica', 'arial', sans-serif;
 }
 
 header{
-    padding: $outerSpacing;
-    .logo { float: left; }
+    position: fixed;
+    width: 180px;
+    height: 100%;
+    background-color: #4c4c4c;
+    .logo {
+        width: 90%;
+        padding: 0 5%;
+        margin-top: 2em;
+    }
+    h1 {
+        font-size: 1.6em;
+        color:#fff;
+        text-align: center;
+    }
     nav{
+        margin-top: 1.2em;
         li{
-            margin-left: 10px
+            a {
+                display: block;
+                color: #fff;
+                text-decoration: none;
+                padding: 0.8em 1em;
+                background-color: rgba(255,255,255, 0.1);
+                margin-bottom: 1px;
+                font-size: 1.2em;
+
+                &:hover { background-color: rgba(255,255,255, 0.2); }
+            }
+            li {
+                border-left: 1em solid rgba(0,0,0, 0.2);
+                .js & { display: none; }
+            }
+            &:hover li {
+                display: block;
+                &:hover { border-left: 1em solid rgba(0,0,0, 0.5); }
+            }
         }
     }
 }
 
 section {
     font-size: 1em;
-    margin: $outerSpacing;
-    padding: 2em;
-    border-bottom: 1px dotted #000;
-    h1 { font-size: 2em;}
-    p { font-size: 1.2em }
-    section{
+    margin-bottom: 2px;
+    h1 {
+        padding: 0.4em 0.6em;
+        font-size: 2em;
+        color: #4c4c4c;
+        background-color: #cecece;
+        text-transform: uppercase
+    }
+    p { font-size: 1.4em }
+    section section {
         border-bottom: 0;
+        h1 {
+            text-transform: none;
+            background-color: #ededed;
+        }
+        .contents { background-color: #e1e1e1; }
+    }
+
+    &.container {
+        padding: 2px;
+        margin-top: 0;
+        margin-left: 180px;
+    }
+
+    .contents {
+        padding:2em 1em;
+        background-color: #d9d9d9;
     }
 }
 
 footer {
-    padding: $outerSpacing;
+    clear: both;
+    padding:1em;
+    margin-left: 180px;
+}
+
+@media screen and (max-width: 670px) {
+    header { width: 100%; }
 }
